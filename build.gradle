@@ -31,7 +31,7 @@ repositories {
     // For GeckoLib
     maven {
         name = "GeckoLib"
-        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+        url = "https://maven.blamejared.com/"
     }
 
     // For TerraBlender
@@ -149,24 +149,28 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     // Create Mod dependency
-    implementation "com.simibubi.create:create-${minecraft_version}:${create_version}"
+    implementation files("libs/create-1.21.1-6.0.3.jar")
 
     // Tectonic API for structure generation
-    implementation "com.github.Mrthomas20121:TectonicAPI:${tectonic_version}"
+    implementation files("libs/tectonic-neoforge-1.21.1-2.4.3.jar")
 
     // TerraBlender for biome control
-    implementation "com.github.glitchfiend:TerraBlender-neoforge:${terrablender_version}"
+    implementation files("libs/TerraBlender-neoforge-1.21.1-4.1.0.8.jar")
 
     // GeckoLib for animated entities
-    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    implementation files("libs/geckolib-neoforge-1.21.1-4.7.5.1.jar")
 
     // Patchouli for in-game documentation
-    implementation "vazkii.patchouli:Patchouli:${patchouli_version}"
+    implementation files("libs/Patchouli-1.21-88-NEOFORGE.jar")
 
-    // Optional but recommended mods
-    implementation "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    // JEI for recipe viewing
+    implementation files("libs/jei-1.21.1-neoforge-19.21.0.247.jar")
 
-    implementation "curse.maven:sgjourney-689083:6311907"
+    // Stargate Journey for base stargate items
+    implementation files("libs/Stargate-Journey-1.21.1-0.6.36.jar")
+
+    // Curios for baubles
+    implementation files("libs/curios-neoforge-9.3.1+1.21.1.jar")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
